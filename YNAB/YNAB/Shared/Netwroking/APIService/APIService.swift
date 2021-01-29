@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class APIService<T: TargetType> {
-    func fetchData<M: Decodable>(target: T, responseClass: M.Type, completion: @escaping (Result<BaseResponse<M>?, YNABError>) -> Void) {
+    func fetchData<M: Decodable>(target: T, responseClass: M.Type, completion: @escaping (Result<YNABResponse<M>?, YNABError>) -> Void) {
         let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let params = buildParameters(task: target.task)
@@ -31,7 +31,7 @@ class APIService<T: TargetType> {
                     completion(.failure(.runtimeError("Error in serializing JSON")))
                     return
                 }
-                guard let responseObj = try? JSONDecoder().decode(BaseResponse<M>.self, from: jsonData) else {
+                guard let responseObj = try? JSONDecoder().decode(YNABResponse<M>.self, from: jsonData) else {
                     //ADD custom Error
                     completion(.failure(.runtimeError("Error in decoding JSON")))
                     return

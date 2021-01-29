@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BaseResponse<T: Codable>: Codable {
+struct YNABResponse<T: Codable>: Codable {
     var data: T?
     var errors: YNABErrors?
 }
