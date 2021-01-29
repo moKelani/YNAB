@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184865F1B669DEC41E269951 /* Pods_YNABTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8342D99775CEE5A93CBD3970 /* Pods_YNABTests.framework */; };
+		416632F848AAA43C7AA71373 /* Pods_YNAB_YNABUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998C4737BD15B2C97DFED0B1 /* Pods_YNAB_YNABUITests.framework */; };
 		46B478DD25C3A6FC009FAB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B478DC25C3A6FC009FAB85 /* AppDelegate.swift */; };
 		46B478DF25C3A6FC009FAB85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B478DE25C3A6FC009FAB85 /* SceneDelegate.swift */; };
 		46B478E125C3A6FC009FAB85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B478E025C3A6FC009FAB85 /* ViewController.swift */; };
@@ -15,6 +17,12 @@
 		46B478E925C3A6FD009FAB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B478E725C3A6FD009FAB85 /* LaunchScreen.storyboard */; };
 		46B478F425C3A6FD009FAB85 /* YNABTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B478F325C3A6FD009FAB85 /* YNABTests.swift */; };
 		46B478FF25C3A6FD009FAB85 /* YNABUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B478FE25C3A6FD009FAB85 /* YNABUITests.swift */; };
+		46B4795025C4A14E009FAB85 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B4794F25C4A14E009FAB85 /* TargetType.swift */; };
+		46B4795825C4A27A009FAB85 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B4795725C4A27A009FAB85 /* APIService.swift */; };
+		46B4795E25C4AA02009FAB85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B4795D25C4AA02009FAB85 /* Constants.swift */; };
+		46B479BA25C4AB4F009FAB85 /* YNABError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B479B925C4AB4F009FAB85 /* YNABError.swift */; };
+		46B479BF25C4AEB3009FAB85 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B479BE25C4AEB3009FAB85 /* BaseResponse.swift */; };
+		4E9DC827358EDAFF67F324AE /* Pods_YNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA0ACA4F421B49A01A34C3 /* Pods_YNAB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01555DDBBA8FD919906FB52E /* Pods-YNAB-YNABUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNAB-YNABUITests.release.xcconfig"; path = "Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0E90BE53440A07E5B00E721C /* Pods-YNAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNAB.debug.xcconfig"; path = "Target Support Files/Pods-YNAB/Pods-YNAB.debug.xcconfig"; sourceTree = "<group>"; };
+		19F984DCF42AEFDFEFC65484 /* Pods-YNAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNAB.release.xcconfig"; path = "Target Support Files/Pods-YNAB/Pods-YNAB.release.xcconfig"; sourceTree = "<group>"; };
 		46B478D925C3A6FC009FAB85 /* YNAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B478DC25C3A6FC009FAB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B478DE25C3A6FC009FAB85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,17 @@
 		46B478FA25C3A6FD009FAB85 /* YNABUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YNABUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B478FE25C3A6FD009FAB85 /* YNABUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNABUITests.swift; sourceTree = "<group>"; };
 		46B4790025C3A6FD009FAB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46B4794F25C4A14E009FAB85 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		46B4795725C4A27A009FAB85 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		46B4795D25C4AA02009FAB85 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46B479B925C4AB4F009FAB85 /* YNABError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNABError.swift; sourceTree = "<group>"; };
+		46B479BE25C4AEB3009FAB85 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		8342D99775CEE5A93CBD3970 /* Pods_YNABTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNABTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8787B211CBAE4ED45CF23DD4 /* Pods-YNAB-YNABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNAB-YNABUITests.debug.xcconfig"; path = "Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		998C4737BD15B2C97DFED0B1 /* Pods_YNAB_YNABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNAB_YNABUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6CC8491B01756DEA1FE11DA /* Pods-YNABTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNABTests.release.xcconfig"; path = "Target Support Files/Pods-YNABTests/Pods-YNABTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1AA0ACA4F421B49A01A34C3 /* Pods_YNAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9AD1D213BFE07E10E57A0A8 /* Pods-YNABTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNABTests.debug.xcconfig"; path = "Target Support Files/Pods-YNABTests/Pods-YNABTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9DC827358EDAFF67F324AE /* Pods_YNAB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184865F1B669DEC41E269951 /* Pods_YNABTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416632F848AAA43C7AA71373 /* Pods_YNAB_YNABUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +108,8 @@
 				46B478F225C3A6FD009FAB85 /* YNABTests */,
 				46B478FD25C3A6FD009FAB85 /* YNABUITests */,
 				46B478DA25C3A6FC009FAB85 /* Products */,
+				C3BD8BA1FDDC90DAA8BCCAA4 /* Pods */,
+				6E043F6DBF0D4C9CF4F7BEE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +126,8 @@
 		46B478DB25C3A6FC009FAB85 /* YNAB */ = {
 			isa = PBXGroup;
 			children = (
+				46B4795C25C4A9EB009FAB85 /* Constants */,
+				46B4794725C4A12F009FAB85 /* Netwroking */,
 				46B478DC25C3A6FC009FAB85 /* AppDelegate.swift */,
 				46B478DE25C3A6FC009FAB85 /* SceneDelegate.swift */,
 				46B478E025C3A6FC009FAB85 /* ViewController.swift */,
@@ -128,6 +157,56 @@
 			path = YNABUITests;
 			sourceTree = "<group>";
 		};
+		46B4794725C4A12F009FAB85 /* Netwroking */ = {
+			isa = PBXGroup;
+			children = (
+				46B4794E25C4A13D009FAB85 /* Base */,
+				46B479B925C4AB4F009FAB85 /* YNABError.swift */,
+			);
+			path = Netwroking;
+			sourceTree = "<group>";
+		};
+		46B4794E25C4A13D009FAB85 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				46B4794F25C4A14E009FAB85 /* TargetType.swift */,
+				46B4795725C4A27A009FAB85 /* APIService.swift */,
+				46B479BE25C4AEB3009FAB85 /* BaseResponse.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		46B4795C25C4A9EB009FAB85 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				46B4795D25C4AA02009FAB85 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		6E043F6DBF0D4C9CF4F7BEE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA0ACA4F421B49A01A34C3 /* Pods_YNAB.framework */,
+				998C4737BD15B2C97DFED0B1 /* Pods_YNAB_YNABUITests.framework */,
+				8342D99775CEE5A93CBD3970 /* Pods_YNABTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3BD8BA1FDDC90DAA8BCCAA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E90BE53440A07E5B00E721C /* Pods-YNAB.debug.xcconfig */,
+				19F984DCF42AEFDFEFC65484 /* Pods-YNAB.release.xcconfig */,
+				8787B211CBAE4ED45CF23DD4 /* Pods-YNAB-YNABUITests.debug.xcconfig */,
+				01555DDBBA8FD919906FB52E /* Pods-YNAB-YNABUITests.release.xcconfig */,
+				D9AD1D213BFE07E10E57A0A8 /* Pods-YNABTests.debug.xcconfig */,
+				B6CC8491B01756DEA1FE11DA /* Pods-YNABTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46B4790325C3A6FD009FAB85 /* Build configuration list for PBXNativeTarget "YNAB" */;
 			buildPhases = (
+				ACB20628E212660CCC8A73FF /* [CP] Check Pods Manifest.lock */,
 				46B478D525C3A6FC009FAB85 /* Sources */,
 				46B478D625C3A6FC009FAB85 /* Frameworks */,
 				46B478D725C3A6FC009FAB85 /* Resources */,
+				8EC77306A82CB920EE37B43C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46B4790625C3A6FD009FAB85 /* Build configuration list for PBXNativeTarget "YNABTests" */;
 			buildPhases = (
+				F7A22F669FE53E50E580E0B4 /* [CP] Check Pods Manifest.lock */,
 				46B478EB25C3A6FD009FAB85 /* Sources */,
 				46B478EC25C3A6FD009FAB85 /* Frameworks */,
 				46B478ED25C3A6FD009FAB85 /* Resources */,
@@ -170,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46B4790925C3A6FD009FAB85 /* Build configuration list for PBXNativeTarget "YNABUITests" */;
 			buildPhases = (
+				7A62A6DA53468D7116FC1B9F /* [CP] Check Pods Manifest.lock */,
 				46B478F625C3A6FD009FAB85 /* Sources */,
 				46B478F725C3A6FD009FAB85 /* Frameworks */,
 				46B478F825C3A6FD009FAB85 /* Resources */,
+				04BD808A21480895655B987F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +337,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04BD808A21480895655B987F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A62A6DA53468D7116FC1B9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YNAB-YNABUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC77306A82CB920EE37B43C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YNAB/Pods-YNAB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YNAB/Pods-YNAB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YNAB/Pods-YNAB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACB20628E212660CCC8A73FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YNAB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7A22F669FE53E50E580E0B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YNABTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46B478D525C3A6FC009FAB85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B4795025C4A14E009FAB85 /* TargetType.swift in Sources */,
 				46B478E125C3A6FC009FAB85 /* ViewController.swift in Sources */,
 				46B478DD25C3A6FC009FAB85 /* AppDelegate.swift in Sources */,
 				46B478DF25C3A6FC009FAB85 /* SceneDelegate.swift in Sources */,
+				46B479BA25C4AB4F009FAB85 /* YNABError.swift in Sources */,
+				46B4795825C4A27A009FAB85 /* APIService.swift in Sources */,
+				46B4795E25C4AA02009FAB85 /* Constants.swift in Sources */,
+				46B479BF25C4AEB3009FAB85 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +625,7 @@
 		};
 		46B4790425C3A6FD009FAB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E90BE53440A07E5B00E721C /* Pods-YNAB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +645,7 @@
 		};
 		46B4790525C3A6FD009FAB85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F984DCF42AEFDFEFC65484 /* Pods-YNAB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +665,7 @@
 		};
 		46B4790725C3A6FD009FAB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AD1D213BFE07E10E57A0A8 /* Pods-YNABTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +688,7 @@
 		};
 		46B4790825C3A6FD009FAB85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6CC8491B01756DEA1FE11DA /* Pods-YNABTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +711,7 @@
 		};
 		46B4790A25C3A6FD009FAB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8787B211CBAE4ED45CF23DD4 /* Pods-YNAB-YNABUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +732,7 @@
 		};
 		46B4790B25C3A6FD009FAB85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01555DDBBA8FD919906FB52E /* Pods-YNAB-YNABUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
