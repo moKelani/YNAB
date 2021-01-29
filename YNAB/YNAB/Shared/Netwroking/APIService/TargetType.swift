@@ -19,7 +19,7 @@ enum Task {
     /// A request with no additional data.
     case requestPlain
     /// A requests body set with encoded parameters.
-    case requestParameters(_ parameters: [String: Any],_ encoding: ParameterEncoding)
+    case requestParameters(_ parameters: [String: Any], _ encoding: ParameterEncoding)
 }
 
 protocol TargetType {

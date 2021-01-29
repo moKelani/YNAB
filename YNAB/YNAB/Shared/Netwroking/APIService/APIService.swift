@@ -48,16 +48,14 @@ class APIService<T: TargetType> {
                     completion(.failure(.defaultError))
                 }
             }
-            
         }
-        
     }
-    
+
     private func buildParameters(task: Task) -> ([String: Any], ParameterEncoding) {
         switch task {
         case .requestPlain:
             return([:], URLEncoding.default)
-        case .requestParameters(let parameters,let encoding):
+        case .requestParameters(let parameters, let encoding):
             return(parameters, encoding)
         }
     }
