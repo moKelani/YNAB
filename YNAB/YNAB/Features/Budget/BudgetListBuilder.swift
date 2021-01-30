@@ -11,6 +11,12 @@ class BudgetListBuilder {
     static func viewController() -> BudgetListViewController {
 
         let viewController: BudgetListViewController = BudgetListViewController()
+        
+        let router = BudgetRouter(viewController: viewController)
+        
+        let presenter = BudgetPresenter(output: viewController, router: router)
+        
+        viewController.presenter = presenter
 
         return viewController
     }

@@ -7,14 +7,17 @@
 
 import Foundation
 
-struct YNABResponse<T: Codable>: Codable {
-    var data: T?
-    var errors: YNABErrors?
+struct YNABDataResponse<T: Codable>: Codable {
+    let data: T
+    
 }
 
-struct YNABErrors: Codable {
+
+struct YNABErrorResponse: Codable {
+    let error: YNABError
+}
+struct YNABError: Codable {
     let id: String?
     let name: String?
     let details: String?
-
 }
