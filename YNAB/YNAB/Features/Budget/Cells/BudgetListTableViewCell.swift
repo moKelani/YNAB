@@ -155,7 +155,7 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let date = dateFormatter.date(from: nextDate)
-            dateFormatter.dateFormat = "yyyy/MM/dd"
+            dateFormatter.dateFormat = "dd/MM/yyyy"
             return  dateFormatter.string(from: date!)
         }
         return ""
