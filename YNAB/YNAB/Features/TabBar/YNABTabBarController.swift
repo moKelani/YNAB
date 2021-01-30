@@ -15,8 +15,8 @@ class YNABTabBarController: UITabBarController {
         tabBar.clipsToBounds = true
         UITabBar.appearance().barTintColor = .navbarBlue
         UITabBar.appearance().backgroundColor = .navbarBlue
-        UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().unselectedItemTintColor = .blackLicorice
+        UITabBar.appearance().tintColor = .spiceGarden
+        UITabBar.appearance().unselectedItemTintColor = .white
 
     }
     override func viewWillAppear(_ animated: Bool) {

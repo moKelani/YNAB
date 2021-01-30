@@ -28,6 +28,10 @@ extension UIColor {
     class var navbarBlue: UIColor {
         return UIColor(red: 36.0/255, green: 69.0/255.0, blue: 99.0/255.0, alpha: 1.0)
     }
+    
+    class var unselectedItemBlue: UIColor {
+        return UIColor(red: 69.0/255, green: 96.0/255.0, blue: 123.0/255.0, alpha: 1.0)
+    }
  
     class var backgroundYellow: UIColor {
         return UIColor(red: 233.0/255, green: 196.0/255.0, blue: 106.0/255.0, alpha: 1.0)
