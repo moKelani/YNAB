@@ -11,7 +11,7 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
     
     private lazy var baseInfoView: UIView = {
         let view = UIView()
-        view.backgroundColor = .spiceGarden
+        view.backgroundColor = .backgroundGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -19,7 +19,7 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = .banksiaLeaf
+        label.textColor = .titleGray
         label.numberOfLines = 0
         label.backgroundColor = .clear
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -69,6 +69,7 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = .clear
+        contentView.backgroundColor = .clear
         setUpUI()
         
     }
@@ -130,7 +131,7 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
         }
         
         if let lastModified = budget.lastModifiedOn {
-            LastModifiedLabel.attributedText = setLabelText(title: "Last Modified On: ", value: lastModified)
+            LastModifiedLabel.attributedText = setLabelText(title: "Last Modified On: ", value: formateDate(date: lastModified))
         }
         
         
@@ -138,8 +139,8 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
     }
     
     private func setLabelText(title: String, value: String) -> NSMutableAttributedString {
-        let titleAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.jetBlack]
-        let valueAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.gray]
+        let titleAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.subTitleGray]
+        let valueAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.descriptionGray]
         let title = NSAttributedString(string: title, attributes: titleAttribute)
         let value = NSAttributedString(string: value, attributes: valueAttribute)
         let fullText = NSMutableAttributedString()
@@ -147,6 +148,17 @@ class BudgetListTableViewCell: UITableViewCell, CellReusable {
         fullText.append(value)
         
         return fullText
+    }
+    
+    private func formateDate(date: String) -> String {
+        if let nextDate = date.components(separatedBy: "T").first {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date = dateFormatter.date(from: nextDate)
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            return  dateFormatter.string(from: date!)
+        }
+        return ""
     }
 
 

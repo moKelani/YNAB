@@ -13,9 +13,9 @@ class YNABTabBarController: UITabBarController {
         tabBar.layer.borderWidth = 0.0
         tabBar.layer.borderColor = UIColor.clear.cgColor
         tabBar.clipsToBounds = true
-        UITabBar.appearance().barTintColor = .white
-        UITabBar.appearance().backgroundColor = .white
-        UITabBar.appearance().tintColor = .festivalGreen
+        UITabBar.appearance().barTintColor = .navbarBlue
+        UITabBar.appearance().backgroundColor = .navbarBlue
+        UITabBar.appearance().tintColor = .white
         UITabBar.appearance().unselectedItemTintColor = .blackLicorice
 
     }

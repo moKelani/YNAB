@@ -10,7 +10,7 @@ import UIKit
 extension UIViewController {
 
     func showDefaultNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.isNavigationBarHidden = false
 
         navigationController?.navigationBar.barTintColor = .white
