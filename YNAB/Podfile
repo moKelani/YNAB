@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'YNAB' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for YNAB
+  pod 'Alamofire', '~> 5.4.1'
+  pod 'SwiftLint', '~> 0.42.0'
+
+  target 'YNABTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'YNABUITests' do
+    # Pods for testing
+  end
+
+end

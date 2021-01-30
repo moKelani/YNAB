@@ -1,0 +1,6 @@
+framework module Pods_YNAB_YNABUITests {
+  umbrella header "Pods-YNAB-YNABUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
