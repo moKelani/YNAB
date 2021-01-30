@@ -29,6 +29,19 @@
 		46B479FF25C4C010009FAB85 /* EmptyPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B479FE25C4C010009FAB85 /* EmptyPlaceHolderView.swift */; };
 		46B47A0425C4C029009FAB85 /* UITableView+EmptyPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A0325C4C029009FAB85 /* UITableView+EmptyPlaceHolder.swift */; };
 		46B47A0925C4C03E009FAB85 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A0825C4C03E009FAB85 /* UIViewController+NavigationBar.swift */; };
+		46B47A2125C4E796009FAB85 /* YNABTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A2025C4E796009FAB85 /* YNABTabBarBuilder.swift */; };
+		46B47A3125C4E7C8009FAB85 /* YNABTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A3025C4E7C8009FAB85 /* YNABTabBarController.swift */; };
+		46B47A3825C4E85B009FAB85 /* PayeeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A3725C4E85B009FAB85 /* PayeeBuilder.swift */; };
+		46B47A4025C4E872009FAB85 /* PayeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A3F25C4E872009FAB85 /* PayeeViewController.swift */; };
+		46B47A4525C4E88A009FAB85 /* BudgetListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A4425C4E88A009FAB85 /* BudgetListBuilder.swift */; };
+		46B47A4A25C4E89B009FAB85 /* BudgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A4925C4E89B009FAB85 /* BudgetListViewController.swift */; };
+		46B47A5725C4EF70009FAB85 /* PayeePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A5625C4EF70009FAB85 /* PayeePresenter.swift */; };
+		46B47A5C25C4EFDE009FAB85 /* BasePresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A5B25C4EFDE009FAB85 /* BasePresenterIO.swift */; };
+		46B47A6125C4F0C7009FAB85 /* ViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A6025C4F0C7009FAB85 /* ViewRoutable.swift */; };
+		46B47A6625C4F0EC009FAB85 /* PayeeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A6525C4F0EC009FAB85 /* PayeeRouter.swift */; };
+		46B47A6B25C4F149009FAB85 /* PayeeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A6A25C4F149009FAB85 /* PayeeWorker.swift */; };
+		46B47A7025C4F16A009FAB85 /* BudgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A6F25C4F16A009FAB85 /* BudgetPresenter.swift */; };
+		46B47A7825C4F202009FAB85 /* BudgetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B47A7725C4F202009FAB85 /* BudgetRouter.swift */; };
 		4E9DC827358EDAFF67F324AE /* Pods_YNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA0ACA4F421B49A01A34C3 /* Pods_YNAB.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +92,19 @@
 		46B479FE25C4C010009FAB85 /* EmptyPlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPlaceHolderView.swift; sourceTree = "<group>"; };
 		46B47A0325C4C029009FAB85 /* UITableView+EmptyPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyPlaceHolder.swift"; sourceTree = "<group>"; };
 		46B47A0825C4C03E009FAB85 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		46B47A2025C4E796009FAB85 /* YNABTabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNABTabBarBuilder.swift; sourceTree = "<group>"; };
+		46B47A3025C4E7C8009FAB85 /* YNABTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNABTabBarController.swift; sourceTree = "<group>"; };
+		46B47A3725C4E85B009FAB85 /* PayeeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeBuilder.swift; sourceTree = "<group>"; };
+		46B47A3F25C4E872009FAB85 /* PayeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeViewController.swift; sourceTree = "<group>"; };
+		46B47A4425C4E88A009FAB85 /* BudgetListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListBuilder.swift; sourceTree = "<group>"; };
+		46B47A4925C4E89B009FAB85 /* BudgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListViewController.swift; sourceTree = "<group>"; };
+		46B47A5625C4EF70009FAB85 /* PayeePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeePresenter.swift; sourceTree = "<group>"; };
+		46B47A5B25C4EFDE009FAB85 /* BasePresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterIO.swift; sourceTree = "<group>"; };
+		46B47A6025C4F0C7009FAB85 /* ViewRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRoutable.swift; sourceTree = "<group>"; };
+		46B47A6525C4F0EC009FAB85 /* PayeeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeRouter.swift; sourceTree = "<group>"; };
+		46B47A6A25C4F149009FAB85 /* PayeeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeWorker.swift; sourceTree = "<group>"; };
+		46B47A6F25C4F16A009FAB85 /* BudgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPresenter.swift; sourceTree = "<group>"; };
+		46B47A7725C4F202009FAB85 /* BudgetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRouter.swift; sourceTree = "<group>"; };
 		8342D99775CEE5A93CBD3970 /* Pods_YNABTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNABTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8787B211CBAE4ED45CF23DD4 /* Pods-YNAB-YNABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNAB-YNABUITests.debug.xcconfig"; path = "Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		998C4737BD15B2C97DFED0B1 /* Pods_YNAB_YNABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNAB_YNABUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +237,8 @@
 			children = (
 				46B479E725C4BF9C009FAB85 /* CellReusable.swift */,
 				46B479EF25C4BFC6009FAB85 /* Reachability.swift */,
+				46B47A5B25C4EFDE009FAB85 /* BasePresenterIO.swift */,
+				46B47A6025C4F0C7009FAB85 /* ViewRoutable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -225,6 +253,9 @@
 		46B47A0E25C4C13D009FAB85 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				46B47A3625C4E81C009FAB85 /* Payee */,
+				46B47A3525C4E812009FAB85 /* Budget */,
+				46B47A1F25C4E72D009FAB85 /* TabBar */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -251,6 +282,38 @@
 				46B478EA25C3A6FD009FAB85 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		46B47A1F25C4E72D009FAB85 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				46B47A2025C4E796009FAB85 /* YNABTabBarBuilder.swift */,
+				46B47A3025C4E7C8009FAB85 /* YNABTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		46B47A3525C4E812009FAB85 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				46B47A4425C4E88A009FAB85 /* BudgetListBuilder.swift */,
+				46B47A4925C4E89B009FAB85 /* BudgetListViewController.swift */,
+				46B47A6F25C4F16A009FAB85 /* BudgetPresenter.swift */,
+				46B47A7725C4F202009FAB85 /* BudgetRouter.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		46B47A3625C4E81C009FAB85 /* Payee */ = {
+			isa = PBXGroup;
+			children = (
+				46B47A3725C4E85B009FAB85 /* PayeeBuilder.swift */,
+				46B47A6525C4F0EC009FAB85 /* PayeeRouter.swift */,
+				46B47A6A25C4F149009FAB85 /* PayeeWorker.swift */,
+				46B47A5625C4EF70009FAB85 /* PayeePresenter.swift */,
+				46B47A3F25C4E872009FAB85 /* PayeeViewController.swift */,
+			);
+			path = Payee;
 			sourceTree = "<group>";
 		};
 		6E043F6DBF0D4C9CF4F7BEE2 /* Frameworks */ = {
@@ -514,20 +577,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B47A4A25C4E89B009FAB85 /* BudgetListViewController.swift in Sources */,
+				46B47A7825C4F202009FAB85 /* BudgetRouter.swift in Sources */,
 				46B479DF25C4BF6A009FAB85 /* UITableView+ReusableCell.swift in Sources */,
+				46B47A2125C4E796009FAB85 /* YNABTabBarBuilder.swift in Sources */,
+				46B47A5C25C4EFDE009FAB85 /* BasePresenterIO.swift in Sources */,
+				46B47A7025C4F16A009FAB85 /* BudgetPresenter.swift in Sources */,
 				46B479FA25C4BFFA009FAB85 /* NotificationName.swift in Sources */,
 				46B4795025C4A14E009FAB85 /* TargetType.swift in Sources */,
 				46B478E125C3A6FC009FAB85 /* ViewController.swift in Sources */,
 				46B47A0925C4C03E009FAB85 /* UIViewController+NavigationBar.swift in Sources */,
+				46B47A3825C4E85B009FAB85 /* PayeeBuilder.swift in Sources */,
 				46B479F525C4BFE4009FAB85 /* UIView+Indicator.swift in Sources */,
+				46B47A6B25C4F149009FAB85 /* PayeeWorker.swift in Sources */,
 				46B478DD25C3A6FC009FAB85 /* AppDelegate.swift in Sources */,
 				46B479FF25C4C010009FAB85 /* EmptyPlaceHolderView.swift in Sources */,
 				46B47A0425C4C029009FAB85 /* UITableView+EmptyPlaceHolder.swift in Sources */,
 				46B478DF25C3A6FC009FAB85 /* SceneDelegate.swift in Sources */,
+				46B47A4525C4E88A009FAB85 /* BudgetListBuilder.swift in Sources */,
+				46B47A3125C4E7C8009FAB85 /* YNABTabBarController.swift in Sources */,
 				46B479BA25C4AB4F009FAB85 /* YNABError.swift in Sources */,
 				46B4795825C4A27A009FAB85 /* APIService.swift in Sources */,
 				46B479BF25C4AEB3009FAB85 /* YNABResponse.swift in Sources */,
 				46B479F025C4BFC6009FAB85 /* Reachability.swift in Sources */,
+				46B47A5725C4EF70009FAB85 /* PayeePresenter.swift in Sources */,
+				46B47A6625C4F0EC009FAB85 /* PayeeRouter.swift in Sources */,
+				46B47A4025C4E872009FAB85 /* PayeeViewController.swift in Sources */,
+				46B47A6125C4F0C7009FAB85 /* ViewRoutable.swift in Sources */,
 				46B479E825C4BF9C009FAB85 /* CellReusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

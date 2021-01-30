@@ -52,9 +52,7 @@ extension UIView {
     }
 
     func stopActivityIndicator(tag: Int) {
-
         DispatchQueue.main.async(execute: {
-
             if let loadingIndicatorView = self.subviews.filter({ $0.tag == tag}).first as? UIActivityIndicatorView {
                 loadingIndicatorView.stopAnimating()
                 loadingIndicatorView.removeFromSuperview()
@@ -62,4 +60,3 @@ extension UIView {
         })
     }
 }
-

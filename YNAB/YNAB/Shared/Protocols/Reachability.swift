@@ -31,4 +31,3 @@ class Reachability {
             monitor.start(queue: queue)
     }
 }
-
