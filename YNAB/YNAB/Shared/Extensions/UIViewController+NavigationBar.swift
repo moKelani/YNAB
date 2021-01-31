@@ -9,19 +9,33 @@ import UIKit
 
 extension UIViewController {
 
-    func showDefaultNavigationBar() {
+    func hideLargeTitleNavigationBar() {
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    func showLargeTitleNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    func prepareNavigationBar() {
         navigationController?.isNavigationBarHidden = false
-
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-
-        if var textAttributes = navigationController?.navigationBar.titleTextAttributes {
-            textAttributes[NSAttributedString.Key.foregroundColor] = UIColor.festivalGreen
-            textAttributes[NSAttributedString.Key.font] =  UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
-            navigationController?.navigationBar.titleTextAttributes = textAttributes
-        }
-
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func showLargeNavigationBar() {
+        prepareNavigationBar()
+        navigationController?.navigationBar.largeTitleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)]
+        showLargeTitleNavigationBar()
     }
 
+    func showDefaultNavigationBar() {
+        prepareNavigationBar()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)]
+        hideLargeTitleNavigationBar()
+        
+    }
 }

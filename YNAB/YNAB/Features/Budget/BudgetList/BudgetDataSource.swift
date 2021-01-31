@@ -9,8 +9,10 @@ import UIKit
 
 class BudgetDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    var budgetList: [Budgets]
-    init(with budgetList: [Budgets]) {
+    var budgetList: [Budget]
+    weak var presenter: BudgetListPresenterInput?
+    
+    init(with budgetList: [Budget]) {
         self.budgetList = budgetList
     }
     
@@ -24,6 +26,10 @@ class BudgetDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.router.navigateToBudgetDetails(budget: budgetList[indexPath.row])
     }
     
 }

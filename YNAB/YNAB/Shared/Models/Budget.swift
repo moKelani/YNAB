@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Budgets : Codable {
+struct Budget : Codable {
     let id : String?
     let name : String?
     let lastModifiedOn : String?
@@ -15,7 +15,7 @@ struct Budgets : Codable {
     let lastMonth : String?
     let dateFormat : DateFormat?
     let currencyFormat : CurrencyFormat?
-    let accounts : [Accounts]?
+    let accounts : [Account]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -38,7 +38,7 @@ struct Budgets : Codable {
         lastMonth = try values.decodeIfPresent(String.self, forKey: .lastMonth)
         dateFormat = try values.decodeIfPresent(DateFormat.self, forKey: .dateFormat)
         currencyFormat = try values.decodeIfPresent(CurrencyFormat.self, forKey: .currencyFormat)
-        accounts = try values.decodeIfPresent([Accounts].self, forKey: .accounts)
+        accounts = try values.decodeIfPresent([Account].self, forKey: .accounts)
     }
 
 }

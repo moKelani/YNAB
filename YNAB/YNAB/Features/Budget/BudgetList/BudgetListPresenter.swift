@@ -7,34 +7,35 @@
 
 import Foundation
 
-protocol BudgetPresenterInput: BasePresenterInput {
+protocol BudgetListPresenterInput: BasePresenterInput {
     var router: BudgetRoutable { get }
 }
 
-protocol BudgetPresenterOutput: BasePresenterOutput {
+protocol BudgetListPresenterOutput: BasePresenterOutput {
     func bindToTableView(dataSource: BudgetDataSource)
 }
 
-class BudgetPresenter {
+class BudgetListPresenter {
     
     // MARK: Injections
-    private weak var output: BudgetPresenterOutput?
+    private weak var output: BudgetListPresenterOutput?
     var router: BudgetRoutable
     private var worker: BudgetWorkerProtocol?
     private var budgetDataSource: BudgetDataSource?
 
     // MARK: Initializer
-    init(output: BudgetPresenterOutput,
+    init(output: BudgetListPresenterOutput,
          router: BudgetRoutable) {
         self.output = output
         self.router = router
         worker = BudgetWorker()
+        
     }
     
 }
 
 // MARK: - BudgetPresenterInput
-extension BudgetPresenter: BudgetPresenterInput {
+extension BudgetListPresenter: BudgetListPresenterInput {
     func getBudgetList(isIncludeAccount: Bool) {
         output?.showLoading()
         worker?.getBudgetList(isIncludeAccount: isIncludeAccount) { [weak self] result  in
@@ -43,6 +44,7 @@ extension BudgetPresenter: BudgetPresenterInput {
             case .success(let response):
                 if let budgets = response?.data.budgets {
                     self?.budgetDataSource = BudgetDataSource(with: budgets)
+                    self?.budgetDataSource?.presenter = self
                 }
                 if let dataSource = self?.budgetDataSource {
                     self?.output?.bindToTableView(dataSource: dataSource)
@@ -56,7 +58,7 @@ extension BudgetPresenter: BudgetPresenterInput {
         }
     }
     func viewDidLoad() {
-        getBudgetList(isIncludeAccount: true)
+        getBudgetList(isIncludeAccount: false)
     }
     
 }
