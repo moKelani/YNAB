@@ -324,12 +324,11 @@
 			isa = PBXGroup;
 			children = (
 				46B47ABA25C50EDC009FAB85 /* Cells */,
-				46B47A4425C4E88A009FAB85 /* BudgetListBuilder.swift */,
-				46B47A4925C4E89B009FAB85 /* BudgetListViewController.swift */,
+				46E2370F25C72EF100EC8A45 /* BudgetList */,
+				46E2371025C72F0300EC8A45 /* BudgetDetails */,
 				46B47A6F25C4F16A009FAB85 /* BudgetPresenter.swift */,
 				46B47A7725C4F202009FAB85 /* BudgetRouter.swift */,
 				46B47AA425C4F6AB009FAB85 /* BudgetWorker.swift */,
-				46B47AB525C50A78009FAB85 /* BudgetDataSource.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -368,6 +367,23 @@
 				46B47AC325C51A2D009FAB85 /* Color.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		46E2370F25C72EF100EC8A45 /* BudgetList */ = {
+			isa = PBXGroup;
+			children = (
+				46B47A4425C4E88A009FAB85 /* BudgetListBuilder.swift */,
+				46B47A4925C4E89B009FAB85 /* BudgetListViewController.swift */,
+				46B47AB525C50A78009FAB85 /* BudgetDataSource.swift */,
+			);
+			path = BudgetList;
+			sourceTree = "<group>";
+		};
+		46E2371025C72F0300EC8A45 /* BudgetDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BudgetDetails;
 			sourceTree = "<group>";
 		};
 		6E043F6DBF0D4C9CF4F7BEE2 /* Frameworks */ = {
