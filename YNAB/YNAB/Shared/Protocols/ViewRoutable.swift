@@ -46,7 +46,7 @@ extension ViewRoutable where Self: UIViewController {
     
     public func pushFromTabbar(view: ViewRoutable, animated flag: Bool) {
         if  let view = view as? UIViewController {
-            navigationController?.tabBarController?.present(view, animated: true, completion: nil)
+            navigationController?.tabBarController?.push(view: view, animated: true)
         }
     }
     

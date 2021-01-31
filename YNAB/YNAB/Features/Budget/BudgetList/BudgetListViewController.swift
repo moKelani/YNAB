@@ -20,7 +20,7 @@ class BudgetListViewController: UIViewController {
         return tableView
     }()
     // MARK: Injections
-    var presenter: BudgetPresenterInput!
+    var presenter: BudgetListPresenterInput!
    // MARK: - View Life Cycle
     override func loadView() {
         super.loadView()
@@ -29,7 +29,7 @@ class BudgetListViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        showDefaultNavigationBar()
+        showLargeNavigationBar()
         title = "Budget List"
         presenter.viewDidLoad()
     }
@@ -48,7 +48,7 @@ class BudgetListViewController: UIViewController {
     // MARK: Methods
 }
 
-extension BudgetListViewController: BudgetPresenterOutput {
+extension BudgetListViewController: BudgetListPresenterOutput {
     func bindToTableView(dataSource: BudgetDataSource) {
         DispatchQueue.main.async {
             self.tableView.delegate = dataSource

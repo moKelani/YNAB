@@ -14,7 +14,7 @@ class BudgetListBuilder {
         
         let router = BudgetRouter(viewController: viewController)
         
-        let presenter = BudgetPresenter(output: viewController, router: router)
+        let presenter = BudgetListPresenter(output: viewController, router: router)
         
         viewController.presenter = presenter
 

@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct BudgetListResponse : Codable {
-    let budgets : [Budgets]?
-    let defaultBudget : Budgets?
+struct BudgetList : Codable {
+    let budgets : [Budget]?
+    let defaultBudget : Budget?
 
     enum CodingKeys: String, CodingKey {
 
@@ -19,8 +19,8 @@ struct BudgetListResponse : Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        budgets = try values.decodeIfPresent([Budgets].self, forKey: .budgets)
-        defaultBudget = try values.decodeIfPresent(Budgets.self, forKey: .defaultBudget)
+        budgets = try values.decodeIfPresent([Budget].self, forKey: .budgets)
+        defaultBudget = try values.decodeIfPresent(Budget.self, forKey: .defaultBudget)
     }
 
 }
