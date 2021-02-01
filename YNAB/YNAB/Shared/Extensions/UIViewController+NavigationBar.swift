@@ -20,6 +20,7 @@ extension UIViewController {
     
     func prepareNavigationBar() {
         navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.tintColor = UIColor.black
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }
@@ -27,7 +28,7 @@ extension UIViewController {
     func showLargeNavigationBar() {
         prepareNavigationBar()
         navigationController?.navigationBar.largeTitleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.black,
-        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)]
+        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.bold)]
         showLargeTitleNavigationBar()
     }
 
