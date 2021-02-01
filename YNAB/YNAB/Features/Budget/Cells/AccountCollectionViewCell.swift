@@ -55,9 +55,7 @@ class AccountCollectionViewCell: UICollectionViewCell, CellReusable {
             infoStackView.addArrangedSubview($0)
         }
         setConstraints()
-        //change corner radius
-        self.layer.cornerRadius = 10.0
-        self.backgroundColor = .background2Gray
+        
     }
     
     
@@ -75,7 +73,7 @@ class AccountCollectionViewCell: UICollectionViewCell, CellReusable {
     
     
     // MARK: bind
-    func bind(account: Account, symbol: String?) {
+    func bindAccount(account: Account, symbol: String?) {
         if let name = account.name {
             nameLabel.attributedText = name.setLabelText(title: "Name: ")
         }
@@ -86,6 +84,21 @@ class AccountCollectionViewCell: UICollectionViewCell, CellReusable {
         if let symbol =  symbol {
             balanceLabel.attributedText = "\(account.balance)".setLabelText(title: "Balance: \(symbol)")
         }
+        
+        //change corner radius
+        self.layer.cornerRadius = 10.0
+        self.backgroundColor = .background2Gray
 
+    }
+    
+    func bindPayee(payee: Payee) {
+        if let name = payee.name {
+            nameLabel.attributedText = name.setLabelText(title: "Name: ")
+        }
+        //change corner radius
+        self.layer.cornerRadius = 10.0
+        self.backgroundColor = .background2Gray
+        typeLabel.isHidden = true
+        balanceLabel.isHidden = true
     }
 }

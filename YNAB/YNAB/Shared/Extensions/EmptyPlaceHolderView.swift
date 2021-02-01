@@ -9,32 +9,33 @@ import UIKit
 
 enum EmptyPlaceHolderType {
     case noInternetConnection
+    case emptyRecord
     case error(message: String)
     case search
-    case empty
 
+}
+protocol EmptyActionDelegate {
+    func didTappedActionButton()
 }
 
 class EmptyPlaceHolderView: UIView {
+    
+    var actionFunction: (() -> Void)?
 
     var emptyPlaceHolderType: EmptyPlaceHolderType = .noInternetConnection {
         didSet {
             switch emptyPlaceHolderType {
             case .noInternetConnection:
-                titleLabel.text = "No internet connection"
-                detailsLabel.text = "Please check your internet connection and try again."
+                titleLabel.text = "No Internet"
                 logoImageView.image = UIImage(named: "retry")
             case .error(let message):
-                titleLabel.text = "Error Happen"
-                detailsLabel.text = message
+                titleLabel.text = message
                 logoImageView.image = UIImage(named: "retry")
             case .search:
                 titleLabel.text = "Search"
-                detailsLabel.text = "Enter Your Text"
                 logoImageView.image = UIImage(named: "search_icon")
-                logoImageView.tintColor = UIColor(named: "TitleColor") ?? .black
-            case .empty:
-                titleLabel.text = "No Data Yet"
+            case .emptyRecord:
+                titleLabel.text = "No Records"
             }
         }
     }
@@ -42,6 +43,8 @@ class EmptyPlaceHolderView: UIView {
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .clear
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -51,10 +54,6 @@ class EmptyPlaceHolderView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = nil
-        NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 40),
-            imageView.widthAnchor.constraint(equalToConstant: 60)
-        ])
         return imageView
     }()
 
@@ -67,6 +66,7 @@ class EmptyPlaceHolderView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(logoImageView)
         stackView.addArrangedSubview(labelsStackView)
+        stackView.addArrangedSubview(actionButton)
         return stackView
     }()
 
@@ -78,31 +78,24 @@ class EmptyPlaceHolderView: UIView {
         stackView.spacing =  0
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(detailsLabel)
-        stackView.addArrangedSubview(actionButton)
         return stackView
     }()
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = ""
-        label.font = UIFont.boldSystemFont(ofSize: 16.0)
-        label.textColor = UIColor(named: "TitleColor") ?? .black
         label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-
-        return label
-    }()
-
-    let detailsLabel: UILabel = {
-        let label = UILabel()
-        label.text = ""
-        label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .gray
-        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
+    
+    @objc func actionButtonTapped() {
+        if actionFunction != nil {
+            actionFunction!()
+        }
+        
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)

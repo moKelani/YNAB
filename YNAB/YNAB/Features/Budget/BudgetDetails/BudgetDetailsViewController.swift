@@ -69,7 +69,7 @@ class BudgetDetailsViewController: UIViewController {
     }
 }
 extension BudgetDetailsViewController: BudgetDetailsPresenterOutput {
-    func bindToCollectionvView(dataSource: AccountDataSource) {
+    func bindToCollectionvView(dataSource: BudgetDetailsDataSource) {
         DispatchQueue.main.async {
             self.collectionView.delegate = dataSource
             self.collectionView.dataSource = dataSource
