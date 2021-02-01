@@ -9,6 +9,7 @@ import UIKit
 
 protocol BudgetRoutable: ViewRoutable {
     func navigateToBudgetDetails(budget: Budget)
+    func navigateToCreateAccount(budgetId: String)
 }
 class BudgetRouter {
     // MARK: Injections
@@ -23,6 +24,11 @@ extension BudgetRouter: BudgetRoutable {
     func navigateToBudgetDetails(budget: Budget) {
         let budgetDetailsViewController = BudgetDetailsBuilder.viewController(budget: budget)
         viewController?.navigationController?.pushViewController(budgetDetailsViewController, animated: true)
+    }
+    
+    func navigateToCreateAccount(budgetId: String) {
+        let createAccountViewController = CreateAccountBuilder.viewController(budgetId: budgetId)
+        viewController?.navigationController?.pushViewController(createAccountViewController, animated: true)
     }
 }
 

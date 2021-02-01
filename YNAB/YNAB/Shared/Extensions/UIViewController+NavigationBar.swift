@@ -8,6 +8,11 @@
 import UIKit
 
 extension UIViewController {
+    
+    // you can use that function for setting navigation bar items in the top right of navigation bar
+    func rightNavBarItems(_ buttons: UIBarButtonItem...) {
+        navigationItem.rightBarButtonItems = buttons
+    }
 
     func hideLargeTitleNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
@@ -39,4 +44,6 @@ extension UIViewController {
         hideLargeTitleNavigationBar()
         
     }
+    
+    
 }

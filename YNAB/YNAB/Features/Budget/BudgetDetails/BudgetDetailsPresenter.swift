@@ -11,6 +11,7 @@ protocol BudgetDetailsPresenterInput: BasePresenterInput {
     var router: BudgetRoutable { get }
     func getAccountList(budgetID: String)
     func getPayeeList(budgetID: String)
+    func onTappedCreateAccount()
 }
 
 protocol BudgetDetailsPresenterOutput: BasePresenterOutput {
@@ -94,6 +95,13 @@ extension BudgetDetailsPresenter: BudgetDetailsPresenterInput {
             output?.bind(budget: budget)
         }
         handleBudgetDetails()
+    }
+    
+    func onTappedCreateAccount() {
+        if let budgetId = budget?.id {
+            router.navigateToCreateAccount(budgetId: budgetId)
+        }
+        
     }
 }
 

@@ -39,12 +39,14 @@ class BudgetDetailsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         presenter.viewDidLoad()
        // budgetView.isHidden = true
     }
     // MARK: - Methods
     private func setupUI() {
         showDefaultNavigationBar()
+        rightNavBarItems(createAccountButton())
         view.backgroundColor = .white
         view.addSubview(budgetView)
         view.addSubview(collectionView)
@@ -67,6 +69,19 @@ class BudgetDetailsViewController: UIViewController {
             collectionView.widthAnchor.constraint(equalTo: budgetView.widthAnchor)
         ])
     }
+    
+    func createAccountButton() -> UIBarButtonItem {
+        let barButtonItem =  UIBarButtonItem(systemItem: .add)
+        barButtonItem.tintColor = .black
+        barButtonItem.action = #selector(buttonTapped)
+        barButtonItem.target = self
+        return barButtonItem
+    }
+    @objc func buttonTapped() {
+        presenter.onTappedCreateAccount()
+    }
+    
+    
 }
 extension BudgetDetailsViewController: BudgetDetailsPresenterOutput {
     func bindToCollectionvView(dataSource: BudgetDetailsDataSource) {
