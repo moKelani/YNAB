@@ -18,13 +18,14 @@ class BudgetDetailsViewController: UIViewController {
     }()
     private lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.setCollectionViewLayout(layout, animated: true)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = nil
         collectionView.dataSource = nil
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.identifier)
         collectionView.backgroundColor = .white
         return collectionView
     }()
@@ -62,8 +63,8 @@ class BudgetDetailsViewController: UIViewController {
             collectionView.topAnchor.constraint(equalTo: budgetView.bottomAnchor, constant: 8),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            collectionView.widthAnchor.constraint(equalTo: budgetView.widthAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 100)
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            collectionView.widthAnchor.constraint(equalTo: budgetView.widthAnchor)
         ])
     }
 }

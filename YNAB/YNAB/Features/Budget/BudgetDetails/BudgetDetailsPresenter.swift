@@ -69,9 +69,18 @@ extension BudgetDetailsPresenter: BudgetDetailsPresenterInput {
         }
         
         if let id = budget?.id {
-            getAccountList(budgetID: id)
+            let budgetDetailsQueue = OperationQueue()
+            let accountOperation = BlockOperation {
+                self.getAccountList(budgetID: id)
+
+            }
+            let payeeOperation = BlockOperation {
+                self.getAccountList(budgetID: id)
+            }
+            payeeOperation.addDependency(accountOperation)
+            budgetDetailsQueue.addOperation(accountOperation)
+            budgetDetailsQueue.addOperation(payeeOperation)
         }
-        
     }
     
 }
