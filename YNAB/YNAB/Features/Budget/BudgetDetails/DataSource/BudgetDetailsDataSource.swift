@@ -1,5 +1,5 @@
 //
-//  AccountDataSource.swift
+//  BudgetDetailsDataSource.swift
 //  YNAB
 //
 //  Created by Mohamed Kelany on 01/02/2021.
@@ -7,22 +7,54 @@
 
 import UIKit
 
-class AccountDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class BudgetDetailsDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var accountList: [Account]
+    var payeeList: [Payee]
     var currencySymbol: String?
-    init(with accountList: [Account], currencySymbol: String?) {
+    init(with accountList: [Account], payeeList: [Payee],  currencySymbol: String?) {
         self.accountList = accountList
+        self.payeeList = payeeList
         self.currencySymbol = currencySymbol
     }
-    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return accountList.count
+        switch section {
+        case 0:
+            if accountList.count == 0 {
+                return 1
+            }
+            return accountList.count
+        case 1:
+            if payeeList.count == 0 {
+                return 1
+            }
+            return payeeList.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccountCollectionViewCell.identifier, for: indexPath) as? AccountCollectionViewCell {
-            cell.bind(account: accountList[indexPath.row], symbol: currencySymbol)
+            switch indexPath.section {
+            case 0:
+                if accountList.count == 0 {
+                    cell.setViewEmptyView(emptyPlaceHolderType: .emptyRecord, action: nil)
+                    return cell
+                }
+                cell.bindAccount(account: accountList[indexPath.row], symbol: currencySymbol)
+            case 1:
+                if payeeList.count == 0 {
+                    cell.setViewEmptyView(emptyPlaceHolderType: .emptyRecord, action: nil)
+                    return cell
+                }
+                cell.bindPayee(payee: payeeList[indexPath.row])
+            default:
+                print("un defined cell")
+            }
             return cell
         }
         return UICollectionViewCell()
@@ -30,12 +62,19 @@ class AccountDataSource: NSObject, UICollectionViewDataSource, UICollectionViewD
     
     // MARK: Header
    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
        switch kind {
        case UICollectionView.elementKindSectionHeader:
 
         if let  headerView: SectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.identifier, for: indexPath) as? SectionHeader {
-            headerView.bind(title: "Accounts")
+            switch indexPath.section {
+            case 0:
+                headerView.bind(title: "Accounts")
+            case 1:
+                headerView.bind(title: "Payees")
+            default:
+                print("un defined section")
+            }
+            
             return headerView
         }
         return UICollectionReusableView()
@@ -43,6 +82,9 @@ class AccountDataSource: NSObject, UICollectionViewDataSource, UICollectionViewD
        }
    }
     
+    
+}
+extension BudgetDetailsDataSource: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
            return CGSize(width: collectionView.frame.size.width, height: 30)
    }

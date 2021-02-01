@@ -10,6 +10,7 @@ import Foundation
 enum BudgetNetworking {
     case getBudgetList(_ isIncludeAccount: Bool)
     case getAccountList(_ budgetId: String)
+    case getPayeeList(_ budgetId: String)
 }
 
 extension BudgetNetworking: TargetType {
@@ -22,6 +23,8 @@ extension BudgetNetworking: TargetType {
             return "?include_accounts=\(isIncludeAccount)"
         case .getAccountList(let budgetId):
             return "/\(budgetId)/accounts"
+        case .getPayeeList(let budgetId):
+            return "/\(budgetId)/payees"
         }
     }
     var method: HTTPMethod {

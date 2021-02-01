@@ -10,9 +10,16 @@ import Foundation
 protocol BudgetWorkerProtocol {
     func getBudgetList(isIncludeAccount: Bool, completion: @escaping (Result<YNABDataResponse<BudgetList>?, ErrorParser>) -> Void)
     func getAccountList(budgetId: String, completion: @escaping (Result<YNABDataResponse<AccountList>?, ErrorParser>) -> Void)
+    func getPayeeList(budgetId: String, completion: @escaping (Result<YNABDataResponse<PayeeList>?, ErrorParser>) -> Void)
 }
 
 class BudgetWorker: APIService<BudgetNetworking>, BudgetWorkerProtocol {
+    func getPayeeList(budgetId: String, completion: @escaping (Result<YNABDataResponse<PayeeList>?, ErrorParser>) -> Void) {
+        fetchData(target: .getAccountList(budgetId), responseClass: PayeeList.self) { (result) in
+            completion(result)
+        }
+    }
+    
     func getAccountList(budgetId: String, completion: @escaping (Result<YNABDataResponse<AccountList>?, ErrorParser>) -> Void) {
         fetchData(target: .getAccountList(budgetId), responseClass: AccountList.self) { (result) in
             completion(result)

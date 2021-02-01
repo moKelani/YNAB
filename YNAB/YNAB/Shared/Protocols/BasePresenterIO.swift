@@ -34,11 +34,14 @@ extension UIViewController: BasePresenterOutput {
     }
     
     func showLoading() {
-        view.startActivityIndicator()
-        
+        DispatchQueue.main.async {
+            self.view.startActivityIndicator()
+        }
     }
     
     func hideLoading() {
-        view.stopActivityIndicator(tag: 55)
+        DispatchQueue.main.async {
+            self.view.stopActivityIndicator(tag: 55)
+        }
     }
 }
