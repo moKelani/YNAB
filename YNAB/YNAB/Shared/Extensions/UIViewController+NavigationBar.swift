@@ -8,6 +8,11 @@
 import UIKit
 
 extension UIViewController {
+    
+    // you can use that function for setting navigation bar items in the top right of navigation bar
+    func rightNavBarItems(_ buttons: UIBarButtonItem...) {
+        navigationItem.rightBarButtonItems = buttons
+    }
 
     func hideLargeTitleNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
@@ -40,17 +45,5 @@ extension UIViewController {
         
     }
     
-    func createAccountButton(with color: UIColor = .black) -> UIBarButtonItem {
-        let barButtonItem =  UIBarButtonItem(systemItem: .add)
-        barButtonItem.tintColor = color
-        barButtonItem.action = #selector(onTappedCreateAccount)
-        barButtonItem.target = self
-        return barButtonItem
-    }
     
-    @objc func onTappedCreateAccount() {
-        let profileHitoryVC = UserProfileHistoryViewController()
-
-        navigationController?.pushViewController(profileHitoryVC, animated: true)
-    }
 }
