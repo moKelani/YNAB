@@ -65,6 +65,7 @@
 		46E73D8E25C79B2600E226ED /* PayeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E73D8B25C79B2600E226ED /* PayeeList.swift */; };
 		46E73D9025C79B2600E226ED /* Payee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E73D8D25C79B2600E226ED /* Payee.swift */; };
 		46E73DA925C7B1D900E226ED /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E73DA825C7B1D900E226ED /* UIView+EmptyState.swift */; };
+		46E73DAF25C7BACA00E226ED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E73DAE25C7BACA00E226ED /* CreateAccountViewController.swift */; };
 		4E9DC827358EDAFF67F324AE /* Pods_YNAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA0ACA4F421B49A01A34C3 /* Pods_YNAB.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		46E73D8B25C79B2600E226ED /* PayeeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayeeList.swift; sourceTree = "<group>"; };
 		46E73D8D25C79B2600E226ED /* Payee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payee.swift; sourceTree = "<group>"; };
 		46E73DA825C7B1D900E226ED /* UIView+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EmptyState.swift"; sourceTree = "<group>"; };
+		46E73DAE25C7BACA00E226ED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		8342D99775CEE5A93CBD3970 /* Pods_YNABTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNABTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8787B211CBAE4ED45CF23DD4 /* Pods-YNAB-YNABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YNAB-YNABUITests.debug.xcconfig"; path = "Target Support Files/Pods-YNAB-YNABUITests/Pods-YNAB-YNABUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		998C4737BD15B2C97DFED0B1 /* Pods_YNAB_YNABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YNAB_YNABUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +358,7 @@
 		46B47A3525C4E812009FAB85 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				46E73DAD25C7BAA700E226ED /* CreateAccount */,
 				46B47ABA25C50EDC009FAB85 /* Cells */,
 				46E2370F25C72EF100EC8A45 /* BudgetList */,
 				46E2371025C72F0300EC8A45 /* BudgetDetails */,
@@ -439,6 +442,14 @@
 				46E73D6625C76CBD00E226ED /* BudgetDetailsDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		46E73DAD25C7BAA700E226ED /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				46E73DAE25C7BACA00E226ED /* CreateAccountViewController.swift */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		6E043F6DBF0D4C9CF4F7BEE2 /* Frameworks */ = {
@@ -746,6 +757,7 @@
 				46B47A9625C4F404009FAB85 /* CurrencyFormat.swift in Sources */,
 				46E73D6725C76CBD00E226ED /* BudgetDetailsDataSource.swift in Sources */,
 				46B47A6625C4F0EC009FAB85 /* PayeeRouter.swift in Sources */,
+				46E73DAF25C7BACA00E226ED /* CreateAccountViewController.swift in Sources */,
 				46B47A4025C4E872009FAB85 /* PayeeViewController.swift in Sources */,
 				46CD0D2625C74AC400E1B85E /* BudgetDetailsPresenter.swift in Sources */,
 				46B47A6125C4F0C7009FAB85 /* ViewRoutable.swift in Sources */,

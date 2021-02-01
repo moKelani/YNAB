@@ -39,4 +39,18 @@ extension UIViewController {
         hideLargeTitleNavigationBar()
         
     }
+    
+    func createAccountButton(with color: UIColor = .black) -> UIBarButtonItem {
+        let barButtonItem =  UIBarButtonItem(systemItem: .add)
+        barButtonItem.tintColor = color
+        barButtonItem.action = #selector(onTappedCreateAccount)
+        barButtonItem.target = self
+        return barButtonItem
+    }
+    
+    @objc func onTappedCreateAccount() {
+        let profileHitoryVC = UserProfileHistoryViewController()
+
+        navigationController?.pushViewController(profileHitoryVC, animated: true)
+    }
 }
