@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Accounts : Codable {
+struct Account : Codable {
     let id : String?
     let name : String?
     let type : String?
     let onBudget : Bool?
     let closed : Bool?
     let note : String?
-    let balance : Int?
+    let balance : Int
     let clearedBalance : Int?
     let unclearedBalance : Int?
     let transferPayeeId : String?
@@ -43,7 +43,7 @@ struct Accounts : Codable {
         onBudget = try values.decodeIfPresent(Bool.self, forKey: .onBudget)
         closed = try values.decodeIfPresent(Bool.self, forKey: .closed)
         note = try values.decodeIfPresent(String.self, forKey: .note)
-        balance = try values.decodeIfPresent(Int.self, forKey: .balance)
+        balance = try values.decode(Int.self, forKey: .balance)
         clearedBalance = try values.decodeIfPresent(Int.self, forKey: .clearedBalance)
         unclearedBalance = try values.decodeIfPresent(Int.self, forKey: .unclearedBalance)
         transferPayeeId = try values.decodeIfPresent(String.self, forKey: .transferPayeeId)
